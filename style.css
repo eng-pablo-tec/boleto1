@@ -1,0 +1,94 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff0f0;
+  padding: 30px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 25px;
+  background: white;
+  border: 2px solid #d00000;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #d00000;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #d00000;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #a00000;
+}
+
+.linha {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.codigo-barras {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.barra {
+  width: 100%;
+  height: 60px;
+  background: repeating-linear-gradient(
+    to right,
+    #000,
+    #000 2px,
+    #fff 2px,
+    #fff 4px
+  );
+  margin-bottom: 10px;
+}
+
+.linha-digitavel {
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media print {
+  #formulario,
+  .botoes {
+    display: none;
+  }
+
+  #boleto {
+    display: block !important;
+  }
+}
