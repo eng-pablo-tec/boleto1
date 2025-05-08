@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerador de Boleto Santander</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="formulario">
+    <h1>Gerador de Boleto - Santander</h1>
+    <p>Insira seu e-mail para gerar seu boleto:</p>
+    <input type="email" id="email" placeholder="seuemail@exemplo.com">
+    <button onclick="gerarBoleto()">Gerar Boleto</button>
+  </div>
+
+  <div class="container hidden" id="boleto">
+    <h1>Boleto Santander</h1>
+
+    <div class="linha">
+      <span class="label">Banco:</span>
+      <span>033 - Santander</span>
+    </div>
+
+    <div class="linha">
+      <span class="label">Cedente:</span>
+      <span>Loja EletroMix LTDA</span>
+    </div>
+
+    <div class="linha">
+      <span class="label">Pagador:</span>
+      <span id="pagador"></span>
+    </div>
+
+    <div class="linha">
+      <span class="label">Produto:</span>
+      <span id="produto"></span>
+    </div>
+
+    <div class="linha">
+      <span class="label">Vencimento:</span>
+      <span id="vencimento"></span>
+    </div>
+
+    <div class="linha">
+      <span class="label">Valor:</span>
+      <span id="valor"></span>
+    </div>
+
+    <div class="linha">
+      <span class="label">Agência / Conta:</span>
+      <span>5678-9 / 12345-6</span>
+    </div>
+
+    <div class="linha codigo-barras">
+      <div class="barra"></div>
+      <p class="linha-digitavel" id="codigo"></p>
+    </div>
+
+    <div class="botoes">
+      <button onclick="window.print()">Imprimir PDF</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
